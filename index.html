@@ -11,7 +11,65 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
+/* HAMBURGER */
 
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+}
+
+.menu-toggle span{
+height:3px;
+width:25px;
+background:white;
+margin:4px 0;
+border-radius:3px;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+}
+
+.nav-links a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+opacity:.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:flex;
+}
+
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+background:rgba(10,5,20,0.95);
+width:200px;
+flex-direction:column;
+text-align:left;
+padding:20px;
+display:none;
+}
+
+.nav-links a{
+margin:10px 0;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+}
 *{
 margin:0;
 padding:0;
@@ -297,7 +355,13 @@ grid-template-columns:repeat(4,1fr);
 
 <b>ROHITH</b>
 
-<div>
+<div class="menu-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="nav-links" id="navLinks">
 <a href="#skills">Skills</a>
 <a href="#dashboards">Profiles</a>
 <a href="#posters">Poster Works</a>
@@ -453,6 +517,12 @@ new Swiper(".conceptSwiper",{loop:true});
 new Swiper(".troroSwiper",{loop:true});
 
 </script>
+<script>
 
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("show");
+}
+
+</script>
 </body>
 </html>
