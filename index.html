@@ -8,17 +8,15 @@
 <title>Rohith K Kanchan | Digital Marketing Freelancer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
-/* HAMBURGER */
 
+/* HAMBURGER */
 .menu-toggle{
 display:none;
 flex-direction:column;
 cursor:pointer;
 }
-
 .menu-toggle span{
 height:3px;
 width:25px;
@@ -28,11 +26,9 @@ border-radius:3px;
 }
 
 /* NAV LINKS */
-
 .nav-links{
 display:flex;
 }
-
 .nav-links a{
 color:white;
 margin-left:20px;
@@ -42,13 +38,8 @@ opacity:.8;
 }
 
 /* MOBILE */
-
 @media(max-width:768px){
-
-.menu-toggle{
-display:flex;
-}
-
+.menu-toggle{display:flex;}
 .nav-links{
 position:absolute;
 top:70px;
@@ -60,16 +51,10 @@ text-align:left;
 padding:20px;
 display:none;
 }
-
-.nav-links a{
-margin:10px 0;
+.nav-links a{margin:10px 0;}
+.nav-links.show{display:flex;}
 }
 
-.nav-links.show{
-display:flex;
-}
-
-}
 *{
 margin:0;
 padding:0;
@@ -79,7 +64,6 @@ scroll-behavior:smooth;
 }
 
 /* BACKGROUND */
-
 body{
 background:
 radial-gradient(circle at 20% 30%, #7b2cff40, transparent 25%),
@@ -90,7 +74,6 @@ overflow-x:hidden;
 }
 
 /* GRID BACKGROUND */
-
 body::before{
 content:"";
 position:fixed;
@@ -106,7 +89,6 @@ z-index:-1;
 }
 
 /* NAVBAR */
-
 nav{
 position:fixed;
 top:0;
@@ -115,12 +97,10 @@ padding:18px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:transparent;
 backdrop-filter:blur(20px);
 border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:999;
 }
-
 nav a{
 color:white;
 margin-left:20px;
@@ -128,13 +108,9 @@ text-decoration:none;
 font-size:14px;
 opacity:.8;
 }
-
-nav a:hover{
-color:#c084fc;
-}
+nav a:hover{color:#c084fc;}
 
 /* HERO */
-
 .hero{
 height:100vh;
 display:flex;
@@ -144,7 +120,6 @@ align-items:center;
 text-align:center;
 padding:20px;
 }
-
 .hero img{
 width:140px;
 height:140px;
@@ -152,17 +127,15 @@ border-radius:50%;
 object-fit:cover;
 border:3px solid #7b2cff;
 margin-bottom:20px;
-  margin-top: 60px;
+margin-top:60px;
 box-shadow:0 0 25px #7b2cff;
 }
-
 .hero h1{
 font-size:30px;
 background:linear-gradient(90deg,#ffffff,#c084fc);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
-
 .hero p{
 margin-top:15px;
 max-width:600px;
@@ -170,7 +143,6 @@ opacity:.85;
 }
 
 /* BUTTON */
-
 .btn{
 margin-top:30px;
 padding:14px 35px;
@@ -180,24 +152,22 @@ color:white;
 font-weight:600;
 text-decoration:none;
 box-shadow:0 0 15px rgba(123,44,255,.7);
+display:inline-block;
 }
 
 /* SECTIONS */
-
 section{
 padding:100px 20px;
 max-width:1100px;
 margin:auto;
 }
-
 .section-title{
 text-align:center;
 font-size:30px;
 margin-bottom:50px;
 }
 
-/* GLASS CARD */
-
+/* GLASS */
 .glass{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
@@ -206,52 +176,69 @@ backdrop-filter:blur(20px);
 padding:25px;
 transition:.3s;
 }
-
 .glass:hover{
 box-shadow:0 0 30px rgba(123,44,255,.6);
 transform:translateY(-5px);
 }
 
 /* SKILLS */
-
 .skills{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
 }
-
 .skill{
 text-align:center;
 padding:18px;
 }
 
-/* POSTER GRID */
+/* SOCIAL MEDIA */
+.social-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+.social-card{
+text-decoration:none;
+color:white;
+text-align:center;
+padding:15px;
+border-radius:15px;
+}
+.social-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:10px;
+}
+.social-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(168,85,247,0.8);
+}
 
+/* POSTERS */
 .poster-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
-
 .poster-grid img{
 width:100%;
 border-radius:12px;
 transition:.3s;
 }
-
 .poster-grid img:hover{
 transform:scale(1.05);
 box-shadow:0 0 20px #a855f7;
 }
 
-/* WEBSITE PROJECTS */
-
+/* WEBSITES */
 .website-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
-
 .website-card{
 text-align:center;
 text-decoration:none;
@@ -260,54 +247,17 @@ padding:25px;
 border-radius:15px;
 background:rgba(255,255,255,0.05);
 }
-
 .website-card:hover{
 box-shadow:0 0 25px rgba(168,85,247,0.8);
 transform:translateY(-5px);
 }
-
 .website-card img{
 width:70px;
 margin-bottom:10px;
 }
 
-/* PHONE MOCKUP */
-
-.phone{
-width:220px;
-height:420px;
-border-radius:30px;
-padding:10px;
-background:black;
-border:4px solid #333;
-box-shadow:0 0 20px rgba(123,44,255,.7);
-overflow:hidden;
-}
-
-.phone img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:20px;
-}
-
-/* SWIPER */
-
-.swiper{
-width:100%;
-}
-
-.swiper-slide{
-display:flex;
-justify-content:center;
-}
-
 /* CONTACT */
-
-.contact{
-text-align:center;
-}
-
+.contact{text-align:center;}
 .contact a{
 display:block;
 margin-top:10px;
@@ -316,7 +266,6 @@ text-decoration:none;
 }
 
 /* WHATSAPP */
-
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -329,31 +278,19 @@ color:white;
 }
 
 /* DESKTOP */
-
 @media(min-width:768px){
-
-.skills{
-grid-template-columns:repeat(4,1fr);
-}
-
-.poster-grid{
-grid-template-columns:repeat(4,1fr);
-}
-
-.website-grid{
-grid-template-columns:repeat(4,1fr);
-}
-
+.skills{grid-template-columns:repeat(4,1fr);}
+.poster-grid{grid-template-columns:repeat(4,1fr);}
+.website-grid{grid-template-columns:repeat(4,1fr);}
+.social-grid{grid-template-columns:repeat(4,1fr);}
 }
 
 </style>
 </head>
 
-
 <body>
 
 <nav>
-
 <b>ROHITH</b>
 
 <div class="menu-toggle" onclick="toggleMenu()">
@@ -364,38 +301,25 @@ grid-template-columns:repeat(4,1fr);
 
 <div class="nav-links" id="navLinks">
 <a href="#skills">Skills</a>
-<a href="#dashboards">Profiles</a>
-<a href="#posters">Poster Works</a>
+<a href="#dashboards">Social Media</a>
+<a href="#posters">Posters</a>
 <a href="#websites">Websites</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
-
-
 <section class="hero">
-
 <img src="images/aaa.png">
-
 <h1>Rohith K Kanchan</h1>
-
 <p>
-I'm a dedicated social media marketing freelancer with 2 years of experience helping small businesses build strong online presences. I specialize in strategies that drive growth, boost engagement, and establish brand identity.
+I'm a dedicated social media marketing freelancer with 2 years of experience helping small businesses build strong online presences.
 </p>
-
 <a class="btn" href="#contact">Let's Work Together</a>
-
 </section>
 
-
-
 <section id="skills">
-
 <h2 class="section-title">Core Skills</h2>
-
 <div class="skills">
-
 <div class="skill glass">Website Development</div>
 <div class="skill glass">Social Media Marketing</div>
 <div class="skill glass">Meta Ads</div>
@@ -404,134 +328,80 @@ I'm a dedicated social media marketing freelancer with 2 years of experience hel
 <div class="skill glass">Poster Design</div>
 <div class="skill glass">Business Automation</div>
 <div class="skill glass">Content Strategy</div>
-
 </div>
-
 </section>
-
-
 
 <section id="dashboards">
+<h2 class="section-title">Social Media Management</h2>
 
-<h2 class="section-title">Managed Social Profiles</h2>
+<div class="social-grid">
 
-<div class="swiper conceptSwiper">
-
-<div class="swiper-wrapper">
-
-<div class="swiper-slide">
-<div class="phone">
+<a href="https://www.instagram.com/conceptcarz_udupi/" target="_blank" class="social-card glass">
 <img src="images/CC1.jpeg">
-</div>
-</div>
+<p>Watch Page</p>
+</a>
 
-<div class="swiper-slide">
-<div class="phone">
+<a href="https://www.instagram.com/troro_india/" target="_blank" class="social-card glass">
 <img src="images/cc2.jpeg">
-</div>
-</div>
-
-  <div class="swiper-slide">
-  <div class="phone">
-<img src="images/troro 1.jpeg">
-</div>
-</div>
-
-  <div class="swiper-slide">
-  <div class="phone">
-<img src="images/troro 2.jpeg">
-</div>
-</div>
-  
-</div>
-
-</div>
-
-<p style="text-align:center;margin-top:10px;">⬅ Swipe to explore</p>
-
-</section>
-
-
-
-<section id="posters">
-
-<h2 class="section-title">Poster Design Portfolio</h2>
-
-<div class="poster-grid">
-
-<img src="images/1.png">
-<img src="images/10.png">
-<img src="images/11.png">
-<img src="images/12.png">
-  <img src="images/13.jpg">
-  <img src="images/14.png">
-  <img src="images/15.png">
-  <img src="images/16.png">
-  <img src="images/2.png">
-  <img src="images/3.png">
-  <img src="images/5.png">
-  <img src="images/8.png">
-
-</div>
-
-</section>
-
-
-
-<section id="websites">
-
-<h2 class="section-title">Website Projects</h2>
-
-<div class="website-grid">
-
-<a href="https://suvarnahomestayresort.in/" class="website-card">
-<img src="images/suvarna.jpeg">
-<p>Suvarna Homestay</p>
+<p>@client2</p>
 </a>
 
 
 </div>
-
 </section>
 
+<section id="posters">
+<h2 class="section-title">Poster Design Portfolio</h2>
 
+<div class="poster-grid">
+<img src="images/1.png">
+<img src="images/10.png">
+<img src="images/11.png">
+<img src="images/12.png">
+<img src="images/13.jpg">
+<img src="images/14.png">
+<img src="images/15.png">
+<img src="images/16.png">
+<img src="images/2.png">
+<img src="images/3.png">
+<img src="images/5.png">
+<img src="images/8.png">
+</div>
 
-<section id="contact">
-
-<h2 class="section-title">Let's Collaborate</h2>
-
-<div class="contact">
-
-<p>Take your social media presence to the next level.</p>
-
-<a href="https://wa.me/919980174039">WhatsApp: +91 9980174039</a>
-
-<a href="https://www.instagram.com/_.rohith7/">Instagram: _.rohith7</a>
-
+<div style="text-align:center; margin-top:30px;">
+<a href="https://your-portfolio-link.com" target="_blank" class="btn">
+View All Designs
+</a>
 </div>
 
 </section>
 
+<section id="websites">
+<h2 class="section-title">Website Projects</h2>
+<div class="website-grid">
+<a href="https://suvarnahomestayresort.in/" class="website-card">
+<img src="images/suvarna.jpeg">
+<p>Suvarna Homestay</p>
+</a>
+</div>
+</section>
 
+<section id="contact">
+<h2 class="section-title">Let's Collaborate</h2>
+<div class="contact">
+<p>Take your social media presence to the next level.</p>
+<a href="https://wa.me/919980174039">WhatsApp: +91 9980174039</a>
+<a href="https://www.instagram.com/_.rohith7/">Instagram: _.rohith7</a>
+</div>
+</section>
 
 <a class="whatsapp" href="https://wa.me/919980174039">💬</a>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-
-new Swiper(".conceptSwiper",{loop:true});
-new Swiper(".troroSwiper",{loop:true});
-
-</script>
-<script>
-
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("show");
 }
-
 </script>
+
 </body>
 </html>
