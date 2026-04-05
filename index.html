@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -47,6 +47,7 @@ right:0;
 background:rgba(10,5,20,0.95);
 width:200px;
 flex-direction:column;
+text-align:left;
 padding:20px;
 display:none;
 }
@@ -143,8 +144,8 @@ opacity:.85;
 
 /* BUTTON */
 .btn{
-margin-top:15px;
-padding:12px 25px;
+margin-top:30px;
+padding:14px 35px;
 border-radius:30px;
 background:linear-gradient(45deg,#7b2cff,#a855f7);
 color:white;
@@ -180,18 +181,100 @@ box-shadow:0 0 30px rgba(123,44,255,.6);
 transform:translateY(-5px);
 }
 
-/* GRIDS */
-.skills,.social-grid,.poster-grid,.website-grid{
+/* SKILLS */
+.skills{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+.skill{
+text-align:center;
+padding:18px;
+}
+
+/* SOCIAL MEDIA */
+.social-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
+}
+.social-card{
+text-decoration:none;
+color:white;
 text-align:center;
+padding:15px;
+border-radius:15px;
+}
+.social-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:10px;
+}
+.social-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(168,85,247,0.8);
 }
 
-/* IMAGES */
-.poster-grid img,.social-card img{
+/* POSTERS */
+.poster-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+.poster-grid img{
 width:100%;
 border-radius:12px;
+transition:.3s;
+}
+.poster-grid img:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #a855f7;
+}
+
+/* WEBSITES */
+.website-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+.website-card{
+text-align:center;
+text-decoration:none;
+color:white;
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,0.05);
+}
+.website-card:hover{
+box-shadow:0 0 25px rgba(168,85,247,0.8);
+transform:translateY(-5px);
+}
+.website-card img{
+width:70px;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{text-align:center;}
+.contact a{
+display:block;
+margin-top:10px;
+color:white;
+text-decoration:none;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+font-size:22px;
+color:white;
 }
 
 /* DESKTOP */
@@ -211,14 +294,14 @@ border-radius:12px;
 <b>ROHITH</b>
 
 <div class="menu-toggle" onclick="toggleMenu()">
-<span></span><span></span><span></span>
+<span></span>
+<span></span>
+<span></span>
 </div>
 
 <div class="nav-links" id="navLinks">
 <a href="#skills">Skills</a>
-<a href="#ads-performance">Performance</a>
-<a href="#results">Results</a>
-<a href="#dashboards">Social</a>
+<a href="#dashboards">Social Media</a>
 <a href="#posters">Posters</a>
 <a href="#websites">Websites</a>
 <a href="#contact">Contact</a>
@@ -228,64 +311,48 @@ border-radius:12px;
 <section class="hero">
 <img src="images/aaa.png">
 <h1>Rohith K Kanchan</h1>
-<p>I'm a social media marketing freelancer helping businesses grow online.</p>
+<p>
+I'm a dedicated social media marketing freelancer with 2 years of experience helping small businesses build strong online presences.
+</p>
 <a class="btn" href="#contact">Let's Work Together</a>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
 <h2 class="section-title">Core Skills</h2>
 <div class="skills">
-<div class="glass">Website Development</div>
-<div class="glass">Social Media Marketing</div>
-<div class="glass">Meta Ads</div>
-<div class="glass">SEO & Google Business</div>
-<div class="glass">Video Editing</div>
-<div class="glass">Poster Design</div>
-<div class="glass">Business Automation</div>
-<div class="glass">Content Strategy</div>
+<div class="skill glass">Website Development</div>
+<div class="skill glass">Social Media Marketing</div>
+<div class="skill glass">Meta Ads</div>
+<div class="skill glass">SEO & Google Business</div>
+<div class="skill glass">Video Editing</div>
+<div class="skill glass">Poster Design</div>
+<div class="skill glass">Business Automation</div>
+<div class="skill glass">Content Strategy</div>
 </div>
 </section>
 
-<!-- AD PERFORMANCE -->
-<section id="ads-performance">
-<h2 class="section-title">🚀 Ad Performance</h2>
-<div class="skills">
-<div class="glass"><h3>₹1,00,000+</h3><p>Ad Spend</p></div>
-<div class="glass"><h3>₹10,00,000+</h3><p>Revenue Generated</p></div>
-<div class="glass"><h3 style="color:#ff3b3b;">10X</h3><p>ROI</p></div>
-</div>
-</section>
-
-<!-- RESULTS -->
-<section id="results">
-<h2 class="section-title">📊 Results & Case Studies</h2>
-<div class="skills">
-<a href="#" class="btn">Poster Designs</a>
-<a href="#" class="btn">Video Shoot & Editing</a>
-<a href="#" class="btn">Social Media Insights</a>
-<a href="#" class="btn">Meta Ads Reports</a>
-</div>
-</section>
-
-<!-- SOCIAL -->
 <section id="dashboards">
 <h2 class="section-title">Social Media Management</h2>
+
 <div class="social-grid">
-<a href="https://www.instagram.com/conceptcarz_udupi/" target="_blank" class="glass">
+
+<a href="https://www.instagram.com/conceptcarz_udupi/" target="_blank" class="social-card glass">
 <img src="images/cclogo.png">
-<p>Concept Cars</p>
+<p>Watch Page</p>
 </a>
-<a href="https://www.instagram.com/troro_india/" target="_blank" class="glass">
+
+<a href="https://www.instagram.com/troro_india/" target="_blank" class="social-card glass">
 <img src="images/trorologo.png">
-<p>Troro India</p>
+<p>Watch Page</p>
 </a>
+
+
 </div>
 </section>
 
-<!-- POSTERS -->
 <section id="posters">
 <h2 class="section-title">Poster Design Portfolio</h2>
+
 <div class="poster-grid">
 <img src="images/1.png">
 <img src="images/10.png">
@@ -294,23 +361,35 @@ border-radius:12px;
 <img src="images/13.jpg">
 <img src="images/14.png">
 </div>
+
+<div style="text-align:center; margin-top:30px;">
+<a href="https://rohith720.github.io/digital-showcare/" target="_blank" class="btn">
+View All Works
+</a>
+</div>
+
 </section>
 
-<!-- WEBSITES -->
 <section id="websites">
 <h2 class="section-title">Website Projects</h2>
 <div class="website-grid">
-<a href="https://suvarnahomestayresort.in/" class="glass">
+<a href="https://suvarnahomestayresort.in/" class="website-card">
+<img src="images/suvarna.jpeg">
 <p>Suvarna Homestay</p>
 </a>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2 class="section-title">Let's Collaborate</h2>
-<p style="text-align:center;">WhatsApp: +91 9980174039</p>
+<div class="contact">
+<p>Take your social media presence to the next level.</p>
+<a href="https://wa.me/919980174039">WhatsApp: +91 9980174039</a>
+<a href="https://www.instagram.com/_.rohith7/">Instagram: _.rohith7</a>
+</div>
 </section>
+
+<a class="whatsapp" href="https://wa.me/919980174039">💬</a>
 
 <script>
 function toggleMenu(){
