@@ -47,7 +47,6 @@ right:0;
 background:rgba(10,5,20,0.95);
 width:200px;
 flex-direction:column;
-text-align:left;
 padding:20px;
 display:none;
 }
@@ -181,33 +180,18 @@ box-shadow:0 0 30px rgba(123,44,255,.6);
 transform:translateY(-5px);
 }
 
-/* SKILLS */
-.skills{
+/* GRIDS */
+.skills,.social-grid,.poster-grid,.website-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:15px;
+gap:20px;
 text-align:center;
 }
 
-/* SOCIAL */
-.social-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-/* POSTERS */
-.poster-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-/* WEBSITE */
-.website-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+/* IMAGES */
+.poster-grid img,.social-card img{
+width:100%;
+border-radius:12px;
 }
 
 /* DESKTOP */
@@ -234,6 +218,9 @@ gap:20px;
 <a href="#skills">Skills</a>
 <a href="#ads-performance">Performance</a>
 <a href="#results">Results</a>
+<a href="#dashboards">Social</a>
+<a href="#posters">Posters</a>
+<a href="#websites">Websites</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -241,7 +228,7 @@ gap:20px;
 <section class="hero">
 <img src="images/aaa.png">
 <h1>Rohith K Kanchan</h1>
-<p>Social media marketing freelancer helping businesses grow online.</p>
+<p>I'm a social media marketing freelancer helping businesses grow online.</p>
 <a class="btn" href="#contact">Let's Work Together</a>
 </section>
 
@@ -263,34 +250,59 @@ gap:20px;
 <!-- AD PERFORMANCE -->
 <section id="ads-performance">
 <h2 class="section-title">🚀 Ad Performance</h2>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;">
-<div class="glass">
-<h3>₹1,00,000+</h3>
-<p>Ad Spend</p>
-</div>
-
-<div class="glass">
-<h3>₹10,00,000+</h3>
-<p>Revenue Generated</p>
-</div>
-
-<div class="glass">
-<h3 style="color:#ff3b3b;">10X</h3>
-<p>ROI</p>
-</div>
+<div class="skills">
+<div class="glass"><h3>₹1,00,000+</h3><p>Ad Spend</p></div>
+<div class="glass"><h3>₹10,00,000+</h3><p>Revenue Generated</p></div>
+<div class="glass"><h3 style="color:#ff3b3b;">10X</h3><p>ROI</p></div>
 </div>
 </section>
 
 <!-- RESULTS -->
 <section id="results">
 <h2 class="section-title">📊 Results & Case Studies</h2>
-
 <div class="skills">
 <a href="#" class="btn">Poster Designs</a>
 <a href="#" class="btn">Video Shoot & Editing</a>
 <a href="#" class="btn">Social Media Insights</a>
 <a href="#" class="btn">Meta Ads Reports</a>
+</div>
+</section>
+
+<!-- SOCIAL -->
+<section id="dashboards">
+<h2 class="section-title">Social Media Management</h2>
+<div class="social-grid">
+<a href="https://www.instagram.com/conceptcarz_udupi/" target="_blank" class="glass">
+<img src="images/cclogo.png">
+<p>Concept Cars</p>
+</a>
+<a href="https://www.instagram.com/troro_india/" target="_blank" class="glass">
+<img src="images/trorologo.png">
+<p>Troro India</p>
+</a>
+</div>
+</section>
+
+<!-- POSTERS -->
+<section id="posters">
+<h2 class="section-title">Poster Design Portfolio</h2>
+<div class="poster-grid">
+<img src="images/1.png">
+<img src="images/10.png">
+<img src="images/11.png">
+<img src="images/12.png">
+<img src="images/13.jpg">
+<img src="images/14.png">
+</div>
+</section>
+
+<!-- WEBSITES -->
+<section id="websites">
+<h2 class="section-title">Website Projects</h2>
+<div class="website-grid">
+<a href="https://suvarnahomestayresort.in/" class="glass">
+<p>Suvarna Homestay</p>
+</a>
 </div>
 </section>
 
