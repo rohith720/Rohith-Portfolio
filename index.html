@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -212,10 +212,6 @@ object-fit:cover;
 border-radius:12px;
 margin-bottom:10px;
 }
-.social-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 25px rgba(168,85,247,0.8);
-}
 
 /* POSTERS */
 .poster-grid{
@@ -228,10 +224,6 @@ width:100%;
 border-radius:12px;
 transition:.3s;
 }
-.poster-grid img:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px #a855f7;
-}
 
 /* WEBSITES */
 .website-grid{
@@ -239,31 +231,33 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
-.website-card{
+
+/* NEW: INSIGHTS GRID */
+.insight-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.insight-grid img{
+width:100%;
+border-radius:12px;
+}
+
+/* NEW: META BOXES */
+.meta-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.meta-box{
 text-align:center;
-text-decoration:none;
-color:white;
-padding:25px;
-border-radius:15px;
-background:rgba(255,255,255,0.05);
-}
-.website-card:hover{
-box-shadow:0 0 25px rgba(168,85,247,0.8);
-transform:translateY(-5px);
-}
-.website-card img{
-width:70px;
-margin-bottom:10px;
+padding:30px;
+font-size:18px;
+font-weight:600;
 }
 
 /* CONTACT */
 .contact{text-align:center;}
-.contact a{
-display:block;
-margin-top:10px;
-color:white;
-text-decoration:none;
-}
 
 /* WHATSAPP */
 .whatsapp{
@@ -292,13 +286,9 @@ color:white;
 
 <nav>
 <b>ROHITH</b>
-
 <div class="menu-toggle" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
+<span></span><span></span><span></span>
 </div>
-
 <div class="nav-links" id="navLinks">
 <a href="#skills">Skills</a>
 <a href="#dashboards">Social Media</a>
@@ -311,9 +301,7 @@ color:white;
 <section class="hero">
 <img src="images/aaa.png">
 <h1>Rohith K Kanchan</h1>
-<p>
-I'm a dedicated social media marketing freelancer with 2 years of experience helping small businesses build strong online presences.
-</p>
+<p>I'm a dedicated social media marketing freelancer with 2 years of experience helping small businesses build strong online presences.</p>
 <a class="btn" href="#contact">Let's Work Together</a>
 </section>
 
@@ -333,26 +321,14 @@ I'm a dedicated social media marketing freelancer with 2 years of experience hel
 
 <section id="dashboards">
 <h2 class="section-title">Social Media Management</h2>
-
 <div class="social-grid">
-
-<a href="https://www.instagram.com/conceptcarz_udupi/" target="_blank" class="social-card glass">
-<img src="images/cclogo.png">
-<p>Watch Page</p>
-</a>
-
-<a href="https://www.instagram.com/troro_india/" target="_blank" class="social-card glass">
-<img src="images/trorologo.png">
-<p>Watch Page</p>
-</a>
-
-
+<a href="#" class="social-card glass"><img src="images/cclogo.png"><p>Watch Page</p></a>
+<a href="#" class="social-card glass"><img src="images/trorologo.png"><p>Watch Page</p></a>
 </div>
 </section>
 
 <section id="posters">
 <h2 class="section-title">Poster Design Portfolio</h2>
-
 <div class="poster-grid">
 <img src="images/1.png">
 <img src="images/10.png">
@@ -361,22 +337,38 @@ I'm a dedicated social media marketing freelancer with 2 years of experience hel
 <img src="images/13.jpg">
 <img src="images/14.png">
 </div>
-
-<div style="text-align:center; margin-top:30px;">
-<a href="https://rohith720.github.io/digital-showcare/" target="_blank" class="btn">
-View All Works
-</a>
-</div>
-
 </section>
 
 <section id="websites">
 <h2 class="section-title">Website Projects</h2>
 <div class="website-grid">
-<a href="https://suvarnahomestayresort.in/" class="website-card">
+<a href="#" class="website-card glass">
 <img src="images/suvarna.jpeg">
 <p>Suvarna Homestay</p>
 </a>
+</div>
+</section>
+
+<!-- NEW SECTION -->
+<section>
+<h2 class="section-title">Social Media Insights Proof</h2>
+<div class="insight-grid">
+<img src="images/i1.png">
+<img src="images/i2.png">
+<img src="images/i3.png">
+<img src="images/i4.png">
+<img src="images/i5.png">
+<img src="images/i6.png">
+</div>
+</section>
+
+<!-- NEW SECTION -->
+<section>
+<h2 class="section-title">Meta Ads Performance</h2>
+<div class="meta-grid">
+<div class="meta-box glass">₹50K Ad Spend</div>
+<div class="meta-box glass">₹5 Lakh+ Revenue Generated</div>
+<div class="meta-box glass">10X ROI</div>
 </div>
 </section>
 
@@ -384,12 +376,11 @@ View All Works
 <h2 class="section-title">Let's Collaborate</h2>
 <div class="contact">
 <p>Take your social media presence to the next level.</p>
-<a href="https://wa.me/919980174039">WhatsApp: +91 9980174039</a>
-<a href="https://www.instagram.com/_.rohith7/">Instagram: _.rohith7</a>
+<a href="#">WhatsApp: +91 9980174039</a>
 </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/919980174039">💬</a>
+<a class="whatsapp" href="#">💬</a>
 
 <script>
 function toggleMenu(){
