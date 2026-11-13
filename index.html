@@ -55,6 +55,102 @@ section { padding:96px 24px; max-width:1180px; margin:auto; }
 @media(min-width:768px) { .skills { grid-template-columns:repeat(4,1fr); } .poster-grid { grid-template-columns:repeat(3,1fr); } .insight-grid { grid-template-columns:repeat(3,1fr); } }
 @media(max-width:767px) { .menu-toggle { display:flex; } .nav-links { position:absolute; top:74px; right:16px; width:210px; padding:16px 20px; display:none; flex-direction:column; align-items:flex-start; gap:16px; background:var(--surface); border:1px solid var(--line); box-shadow:0 18px 35px rgba(28,27,23,.11); } .nav-links.show { display:flex; } .hero { min-height:88vh; } section { padding:72px 20px; } .meta-grid { grid-template-columns:1fr; } }
 
+
+/* RohithXMedia visual theme. Existing markup, URLs and behaviour are preserved. */
+:root {
+  color-scheme:dark;
+  --ink:#FFFFFF;
+  --muted:#B8B8B8;
+  --paper:#050505;
+  --surface:#151515;
+  --line:#292929;
+  --accent:#C6FF00;
+  --accent-hover:#A8E600;
+  --secondary:#101010;
+  --quiet:#777777;
+}
+body { background:var(--paper); -webkit-font-smoothing:antialiased; }
+::selection { background:var(--accent); color:var(--paper); }
+nav { background:rgba(5,5,5,.92); box-shadow:0 8px 32px rgba(0,0,0,.25); }
+nav b { color:var(--ink); letter-spacing:.2em; }
+nav b::after { content:""; display:inline-block; width:7px; height:7px; margin-left:10px; background:var(--accent); transform:skew(-20deg); box-shadow:0 0 16px rgba(198,255,0,.3); }
+.nav-links a { position:relative; padding:9px 0; transition:color .25s; }
+.nav-links a::after { content:""; position:absolute; bottom:2px; left:0; width:100%; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .25s; }
+.nav-links a:hover::after, .nav-links a:focus-visible::after,
+.nav-links a[aria-current="page"]::after { transform:scaleX(1); }
+.nav-links a[aria-current="page"] { color:var(--accent); }
+.menu-toggle { padding:12px; margin-right:-12px; }
+.menu-toggle span { background:var(--accent); }
+.hero {
+  position:relative;
+  isolation:isolate;
+  background:radial-gradient(ellipse at 50% 35%,rgba(198,255,0,.075),transparent 58%),
+    linear-gradient(135deg,var(--secondary),var(--paper) 65%);
+  border-bottom:1px solid var(--line);
+}
+.hero::before { content:""; position:absolute; z-index:-1; pointer-events:none; top:21%; right:9%; width:clamp(45px,12vw,150px); height:clamp(90px,24vw,290px); border-right:1px solid rgba(198,255,0,.18); border-top:1px solid rgba(198,255,0,.18); transform:skew(-24deg); }
+.hero img { border:2px solid var(--line); box-shadow:0 0 0 7px rgba(198,255,0,.035),0 12px 40px rgba(0,0,0,.4); }
+.hero h1 { color:var(--ink); text-wrap:balance; }
+.hero h1::after { content:""; display:block; width:64px; height:3px; margin:26px auto 0; background:var(--accent); box-shadow:0 0 20px rgba(198,255,0,.25); }
+.hero p { line-height:1.85; }
+.btn {
+  border-color:var(--accent); border-radius:8px; background:var(--accent);
+  color:var(--paper); min-height:46px; line-height:1.7;
+  box-shadow:0 4px 20px rgba(198,255,0,.06);
+  transition:background .25s,color .25s,transform .25s,box-shadow .25s,border-color .25s;
+}
+.btn:hover { background:var(--accent-hover); color:var(--paper); border-color:var(--accent-hover); box-shadow:0 6px 26px rgba(198,255,0,.18); }
+#posters .btn, .contact .btn + br + .btn { background:transparent; color:var(--ink); border-color:var(--accent); }
+#posters .btn:hover, .contact .btn + br + .btn:hover { background:rgba(198,255,0,.08); color:var(--accent); box-shadow:0 6px 26px rgba(198,255,0,.12); }
+section { scroll-margin-top:90px; }
+section:not(.hero) { border-bottom:1px solid var(--line); }
+#skills { background:var(--secondary); }
+.section-title { color:var(--ink); text-wrap:balance; }
+.section-title::after { content:""; display:block; width:38px; height:2px; margin:18px auto 0; background:var(--accent); }
+.glass { border-radius:14px; background:linear-gradient(145deg,#191919,var(--surface)); box-shadow:0 8px 24px rgba(0,0,0,.14); }
+.glass:hover { border-color:rgba(198,255,0,.55); box-shadow:0 16px 36px rgba(0,0,0,.32),0 0 24px rgba(198,255,0,.045); }
+.skill { color:var(--ink); }
+.skill::before { content:""; display:block; width:16px; height:2px; margin:0 auto 14px; background:var(--accent); transform:skew(-25deg); }
+.social-card { padding:14px; }
+.social-card img { border-radius:8px; }
+.social-card p { padding:3px 2px 5px; color:var(--accent); }
+.poster-grid img, .insight-grid img { border-radius:10px; background:var(--secondary); }
+.poster-grid img:hover { border-color:var(--accent); box-shadow:0 18px 34px rgba(0,0,0,.35),0 0 24px rgba(198,255,0,.07); }
+.website-card { padding:30px 18px; }
+.website-card img { border:1px solid var(--line); }
+.website-card p { overflow-wrap:anywhere; }
+.meta-box { color:var(--accent); padding:34px 15px; }
+#contact { background:radial-gradient(ellipse at 50% 100%,rgba(198,255,0,.05),transparent 65%); border-bottom:0; }
+.contact .btn + br + .btn { margin-left:0; }
+.whatsapp { background:var(--accent); color:var(--paper); border-color:var(--accent); box-shadow:0 6px 26px rgba(0,0,0,.5),0 0 20px rgba(198,255,0,.12); }
+.whatsapp:hover { background:var(--accent-hover); border-color:var(--accent-hover); }
+a:focus-visible, .menu-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+@media(max-width:767px) {
+  .nav-links { background:rgba(16,16,16,.98); border-radius:12px; box-shadow:0 18px 35px rgba(0,0,0,.5); }
+  .nav-links a { width:100%; }
+  .social-card img { height:clamp(125px,28vw,220px); }
+  .social-card { padding:10px; }
+  .hero::before { right:8%; opacity:.5; }
+}
+@media(max-width:380px) {
+  .social-grid { gap:12px; }
+  .website-card { padding:24px 10px; }
+  .skill { padding:18px 10px; overflow-wrap:anywhere; }
+}
+
+
+/* Anchor destinations supply active navigation styling without new scripts. */
+body:has(#skills:target) a[href="#skills"],
+body:has(#dashboards:target) a[href="#dashboards"],
+body:has(#posters:target) a[href="#posters"],
+body:has(#websites:target) a[href="#websites"],
+body:has(#contact:target) .nav-links a[href="#contact"] { color:var(--accent); }
+body:has(#skills:target) .nav-links a[href="#skills"]::after,
+body:has(#dashboards:target) .nav-links a[href="#dashboards"]::after,
+body:has(#posters:target) .nav-links a[href="#posters"]::after,
+body:has(#websites:target) .nav-links a[href="#websites"]::after,
+body:has(#contact:target) .nav-links a[href="#contact"]::after { transform:scaleX(1); }
+
 </style>
 </head>
 
